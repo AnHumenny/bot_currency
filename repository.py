@@ -15,7 +15,6 @@ class Repo:
     @classmethod
     async def insert_into_date(cls, l):
         async with new_session() as session:
-            print("l", l)
             q = insert(DCurrent).values(l)
             await session.execute(q)
             await session.commit()
@@ -25,7 +24,6 @@ class Repo:
     @classmethod
     async def insert_into_ctat_current(cls, l):
         async with new_session() as session:
-            print("l", l)
             q = insert(DStat).values(l)
             await session.execute(q)
             await session.commit()
